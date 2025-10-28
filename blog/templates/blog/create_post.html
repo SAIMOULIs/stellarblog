@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="create-post glass animated bounceIn">
+  <h2>New Blog Post</h2>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn fancy-btn">Publish</button>
+  </form>
+</div>
+{% endblock %}

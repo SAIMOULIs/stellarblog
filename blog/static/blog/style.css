@@ -1,0 +1,73 @@
+body {
+  font-family: 'Segoe UI', Verdana, Geneva, Tahoma, sans-serif;
+  background: linear-gradient(120deg, #f4f7fa 0%, #b8daff 100%);
+  margin: 0;
+}
+
+header.parallax-header {
+  background: url('/static/blog/header-bg.jpg') 50% 0 fixed;
+  background-size: cover;
+  padding: 2em;
+  color: #fff;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+h1.shine {
+  font-size: 3em;
+  background: linear-gradient(90deg, #b824fa, #35d2fc, #ffcefc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s infinite alternate;
+}
+@keyframes shine {
+  to { opacity: .8; }
+}
+.post-list, .comment-list {
+  display: grid;
+  gap: 1.5em;
+}
+.post-card, .post-detail, .create-post {
+  padding: 2em;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(108,92,231,.08);
+}
+.glass {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+.post-img {
+  max-width: 100%;
+  border-radius: 16px;
+  transition: transform .3s cubic-bezier(.5,1.8,.6,.3);
+}
+.post-img.pop:hover {
+  transform: scale(1.07) rotate(-1.7deg);
+}
+.btn.fancy-btn {
+  background: linear-gradient(90deg, #ff88c0 30%, #b824fa 70%);
+  color: #fff;
+  border: none;
+  padding: .7em 1.7em;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(108,92,231,.12);
+  transition: background .4s, transform .2s;
+}
+.btn.fancy-btn:hover {
+  background: linear-gradient(90deg, #35d2fc , #b824fa);
+  transform: scale(1.08);
+}
+footer {
+  text-align: center;
+  padding: 1em;
+  background: #b824fa;
+  color: #fff;
+  font-size: .9em;
+  border-radius: 0 0 16px 16px;
+}
+.dark-mode {
+  background: #222 !important;
+  color: #f2f2f2 !important;
+}

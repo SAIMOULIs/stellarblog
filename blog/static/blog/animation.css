@@ -1,0 +1,9 @@
+.animated { animation-duration: 1s; animation-fill-mode: both; }
+@keyframes fadeIn { from {opacity: 0;} to {opacity:1;} }
+.fadeIn { animation-name: fadeIn; }
+@keyframes fadeInUp { from {transform: translateY(30px);opacity:0;} to {transform:none;opacity:1;} }
+.fadeInUp { animation-name: fadeInUp;}
+@keyframes bounceIn { 0% {transform:scale(.8);} 50% {transform:scale(1.2);} 100% {transform:scale(1);} }
+.bounceIn { animation-name: bounceIn;}
+@keyframes fadeInLeft { from {transform: translateX(-40px);opacity:0;} to {transform:none;opacity:1;} }
+.fadeInLeft { animation-name: fadeInLeft; }

@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+<div class="glass animated fadeIn" style="max-width: 350px; margin: 3em auto; padding: 2em;">
+    <h2 style="text-align:center; color: #b824fa;">Login to StellarBlog</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn fancy-btn" style="width:100%">Login</button>
+    </form>
+    <p style="text-align:center; margin-top:1.5em;">
+        Don't have an account?
+        <a href="{% url 'register' %}" class="fancy-link">Register here</a>
+    </p>
+</div>
+{% endblock %}
